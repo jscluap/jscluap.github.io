@@ -1,0 +1,63 @@
+body {
+	text-align: center; 
+  padding:  50px 15px;
+  background-color:beige;
+}
+
+button {
+  font-family: "Roboto", "Merriweather", sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 300px;
+  margin: 30px auto;
+  padding: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 4px;
+  outline: 0;
+  background-color: #f78fa7;
+  box-shadow: inset 0 -3px rgba(0, 0, 0, .15);
+}
+
+
+input {
+  border-radius: 4px;
+  padding: 8px 10px;
+  border: 2px solid #D7D7D7;
+  margin: 8px;
+  font-size: 14px;
+}
+
+input:last-of-type {
+  width: 87px;
+}
+
+input:focus {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+div#map {
+    width: calc(100vw - 5em);
+    display: block;
+    height: 60vw;
+    /* padding: 2em; */
+}
+
+body {
+    position: relative;
+}
+section.reviews {
+  
+}
+section.reviews div {
+  width: 49%;
+  display: inline-block;
+}

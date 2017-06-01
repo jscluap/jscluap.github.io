@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Unit 9 Project</title>
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<h1>Monk's Cafe</h1>
+	<h3>"The Coffee Shop"</h3>
+	<img style="border:10px solid black;" src="http://circuits-assets.generalassemb.ly/prod/asset/5475/toms-restaurant.jpg" width="550" height="302" alt="A picture of a restaurant" />
+	<h1>Reservations</h1>
+	<a id="reservation" href="">Make a Reservation</a>
+	 <form id="form" style="display: none;">
+    	<input id="name" type="text" placeholder="Name">
+    	<input id="day" type="text" placeholder="day" >
+    	<button id="confirm">Confirm Reservation</button>
+	</form>
+
+	<a id="existing" href="">Existing Reservations</a>
+	<table id="table" border="1">
+		<tr>
+			<th>Name</th><th>Day</th>
+		</tr>
+		<script id="tableItem" type="text/x-handlebars-template">
+		<tr>
+			<td>{{name}}</td><td>{{day}}</td>
+		</tr>
+		</script>
+	</table>
+	<h1>Come Dine With Us</h1>
+	<div id="map"></div>
+	<section class="reviews">
+	<h1>Customer Reviews</h1>
+	<div>
+		<img src="http://circuits-assets.generalassemb.ly/prod/asset/5474/jerry.jpg" />
+	</div>
+	<div>
+		<p>“Big lettuce, big carrots, tomatoes like volleyballs.” — Jerry Seinfeld, on The BIG Salad </p>
+	</div>
+</section>
+
+	
+   <script src="js/handlebars-v4.0.5.js"></script>
+   <script src="js/jquery-3.2.1.min.js"></script>
+   <script src="js/main.js"></script>
+   <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD71pi0iM0MauQZKn0Surd9KR2bpXCfZho&callback=initMap"></script>
+</body>
+</html>
