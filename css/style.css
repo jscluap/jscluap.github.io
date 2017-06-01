@@ -53,6 +53,7 @@ div#map {
 
 body {
     position: relative;
+    font-family: 'Barrio', cursive;
 }
 section.reviews {
   
@@ -60,4 +61,95 @@ section.reviews {
 section.reviews div {
   width: 49%;
   display: inline-block;
+}
+body {
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: relative;
+    background: black;
+}
+
+h1 {
+    color: white;
+    font-size: 5rem;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+h3.subtitle {
+    color: white;
+    text-align: left;
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+img:first-of-type {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border: 0 !important;
+}
+
+a#reservation {
+    color: gray;
+    font-size: 2em;
+}
+
+span#existing {
+    color: white;
+    display: block;
+    margin: 2em;
+    font-size: 1.5em;
+}
+
+table#table {
+    width: 80%;
+    margin: 0 auto;
+}
+
+th {
+    width: 50%;
+    color: white;
+}
+
+div#map {
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+h2 {
+    color: white;
+    font-size: 3rem;
+}
+
+h3 {
+    color: white;
+    font-size: 3em;
+}
+
+.reviews div {
+    color: white;
+}
+
+section h3 {
+    flex-basis: 100%;
+}
+
+div {}
+
+div {
+    width: 50%;
+    height: 400px;
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+    /* padding: 2em; */
+    font-size: 2em;
+}
+div p {
+    padding: 2em;
+}
+td {
+    color: white;
 }
