@@ -1,49 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <title>Unit 9 Project</title>
-   <link rel="stylesheet" type="text/css" href="css/style.css">
-   <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
-</head>
-<body>
-	<h1>Monk's Cafe</h1>
-	<h3 class="subtitle">"The Coffee Shop"</h3>
-	<img style="border:10px solid black;" src="http://circuits-assets.generalassemb.ly/prod/asset/5475/toms-restaurant.jpg" width="550" height="302" alt="A picture of a restaurant" />
-	<h1>Reservations</h1>
-	<a id="reservation" href="">Make a Reservation</a>
-	 <form id="form" style="display: none;">
-    	<input id="name" type="text" placeholder="Name">
-    	<input id="day" type="text" placeholder="day" >
-    	<button id="confirm">Confirm Reservation</button>
-	</form>
+	<meta charset="UTF-8">
+	<title>Monk's Café</title>
 
-	<span id="existing" href="">Existing Reservations</span>
-	<table id="table" border="1">
-		<tr>
-			<th>Name</th><th>Day</th>
-		</tr>
-		<script id="tableItem" type="text/x-handlebars-template">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body data-spy="scroll" data-target=".navbar-inverse" data-offset="50">
+
+	<!-- template for reservation-list -->
+	<script id="reservation-template" type="text/x-handlebars-template">
 		<tr>
 			<td>{{name}}</td><td>{{day}}</td>
 		</tr>
-		</script>
-	</table>
-	<h2>Come Dine With Us</h2>
-	<div id="map"></div>
-	<section class="reviews">
-	<h3>Customer Reviews</h3>
-	<div>
-		<img src="http://circuits-assets.generalassemb.ly/prod/asset/5474/jerry.jpg" />
-	</div>
-	<div style="float: right;">
-		<p>“Big lettuce, big carrots, tomatoes like volleyballs.” — Jerry Seinfeld, on The BIG Salad </p>
-	</div>
-</section>
+	</script>
 
-	
+	<!-- navbar -->
+	<div id="navbar" class="navbar-collapse navbar-inverse collapse navbar-fixed-top">
+		<a href="#" class="navbar-brand">Monk's Café</a>
+		<ul class="nav navbar-nav navbar-right">
+		  <li class="active"><a href="#reservation">Reservation</a></li>
+		  <li><a href="#map">Map</a></li>
+		</ul>
+	</div>
+
+	<div class="container-fluid restaurant-pic">
+		<div class="row">
+			<div class="col-md-12"></div>
+		</div>
+	</div>
+
+	<div id="reservation" class="container-fluid reservation">
+
+		<!-- reservation form -->
+		<div class="row reservation-form-container">
+			<div class="col-md-12 text-center reservation-form">
+				<form class="form-inline reservations">
+				  <div class="form-group">
+				    <input type="text" class="form-control reservation-name" placeholder="Jane Doe">
+				  </div>
+				  <div class="form-group">
+						<div class="dropdown">
+						  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+						    Select A Day
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu reservation-day">
+						    <li><a>Today</a></li>
+						    <li><a>Tomorrow</a></li>
+						    <li><a>The day after next</a></li>
+						  </ul>
+						</div>
+				  </div>
+				  <button class="btn btn-default reservation-button">Set Reservation</button>
+				</form>
+			</div>
+		</div>
+
+		<!-- reservations -->
+		<table class="table table-striped col-md-12 container-fluid">
+			<h4>Reservations</h4>
+			<thead>
+				<th>Name</th>
+				<th>Day</th>
+			</thead>
+			<tbody class="reservation-list"></tbody>
+		</table>
+	</div>
+
+	<div id="mapDiv" class="container-fluid restaurant-locator">
+	</div>
+
+  <!-- Firebase -->
+
+   <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>	
    <script src="js/handlebars-v4.0.5.js"></script>
    <script src="js/jquery-3.2.1.min.js"></script>
+   <!-- bootstrap js -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script src="js/main.js"></script>
    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD71pi0iM0MauQZKn0Surd9KR2bpXCfZho&callback=initMap"></script>
 </body>

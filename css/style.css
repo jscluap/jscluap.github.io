@@ -1,155 +1,33 @@
-body {
-	text-align: center; 
-  padding:  50px 15px;
-  background-color:beige;
+.restaurant-pic {
+  height: 50vh;
+  background: url('https://i.ytimg.com/vi/7mphrlxJl5k/maxresdefault.jpg');
+  background-size: cover;
+  background-position: 0 40%;
 }
 
-button {
-  font-family: "Roboto", "Merriweather", sans-serif;
-  font-size: 18px;
-  font-style: italic;
+.restaurant-info {
+  height: 50vh;
+}
+
+.reservation {
+  height: 25vh;
+}
+
+/* add a deli pattern background*/
+.reservation-form-container {
   position: relative;
-  z-index: 1;
-  display: block;
-  width: 300px;
-  margin: 30px auto;
-  padding: 10px;
-  cursor: pointer;
-  text-transform: uppercase;
-  border: 0;
-  border-radius: 4px;
-  outline: 0;
-  background-color: #f78fa7;
-  box-shadow: inset 0 -3px rgba(0, 0, 0, .15);
+  height: 100%;
+  background: url('http://ih1.redbubble.net/image.80745362.8983/flat,800x800,075,t.u4.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-
-input {
-  border-radius: 4px;
-  padding: 8px 10px;
-  border: 2px solid #D7D7D7;
-  margin: 8px;
-  font-size: 14px;
+.reservation-form {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-input:last-of-type {
-  width: 87px;
-}
-
-input:focus {
-  outline: none;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-div#map {
-    width: calc(100vw - 5em);
-    display: block;
-    height: 60vw;
-    /* padding: 2em; */
-}
-
-body {
-    position: relative;
-    font-family: 'Barrio', cursive;
-}
-section.reviews {
-  
-}
-section.reviews div {
-  width: 49%;
-  display: inline-block;
-}
-body {
-    padding: 0;
-    margin: 0;
-    display: block;
-    position: relative;
-    background: black;
-}
-
-h1 {
-    color: white;
-    font-size: 5rem;
-    text-align: left;
-    margin-bottom: 0;
-}
-
-h3.subtitle {
-    color: white;
-    text-align: left;
-    font-size: 2.5rem;
-    margin-top: 0;
-}
-
-img:first-of-type {
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    border: 0 !important;
-}
-
-a#reservation {
-    color: gray;
-    font-size: 2em;
-}
-
-span#existing {
-    color: white;
-    display: block;
-    margin: 2em;
-    font-size: 1.5em;
-}
-
-table#table {
-    width: 80%;
-    margin: 0 auto;
-}
-
-th {
-    width: 50%;
-    color: white;
-}
-
-div#map {
-    width: 80%;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-h2 {
-    color: white;
-    font-size: 3rem;
-}
-
-h3 {
-    color: white;
-    font-size: 3em;
-}
-
-.reviews div {
-    color: white;
-}
-
-section h3 {
-    flex-basis: 100%;
-}
-
-div {}
-
-div {
-    width: 50%;
-    height: 400px;
-    box-sizing: border-box;
-    display: block;
-    margin: 0;
-    /* padding: 2em; */
-    font-size: 2em;
-}
-div p {
-    padding: 2em;
-}
-td {
-    color: white;
+.restaurant-locator {
+  height: 50vh;
 }
