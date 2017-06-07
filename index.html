@@ -22,8 +22,8 @@
 	<div id="navbar" class="navbar-collapse navbar-inverse collapse navbar-fixed-top">
 		<a href="#" class="navbar-brand">Monk's Café</a>
 		<ul class="nav navbar-nav navbar-right">
-		  <li class="active"><a href="#reservation">Reservation</a></li>
-		  <li><a href="#map">Map</a></li>
+		  <li class="active"><a class="nav-button" href="#reservation">Reservation</a></li>
+		  <li><a id="map" class="nav-button" href="#map">Map</a></li>
 		</ul>
 	</div>
 
@@ -33,7 +33,7 @@
 		</div>
 	</div>
 
-	<div id="reservation" class="container-fluid reservation">
+	<div id="reservationDiv" class="container-fluid reservation">
 
 		<!-- reservation form -->
 		<div class="row reservation-form-container">
@@ -71,7 +71,7 @@
 		</table>
 	</div>
 
-	<div id="mapDiv" class="container-fluid restaurant-locator">
+	<div id="mapDiv" class="container-fluid restaurant-locator hidden">
 	</div>
 
   <!-- Firebase -->

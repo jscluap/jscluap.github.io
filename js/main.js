@@ -10,6 +10,11 @@ var config = {
   firebase.initializeApp(config);
   var database = firebase.database();
   var reservationData = {};
+$('.nav-button').on('click', function (e) {
+  e.preventDefault();
+  $('#reservationDiv').toggleClass('hidden');
+  $('#mapDiv').toggleClass('hidden');
+});  
 $('.reservation-day li').on('click', function (e) {
   reservationData.day = $(this).text();
   console.log(reservationData.day);
@@ -22,12 +27,19 @@ $('.reservation-button').on('click', function (e){
     reservationsReference.push(reservationData);
 })
 
-var initMap = function () {
+function initMap() {
   var map = new google.maps.Map(document.getElementById('mapDiv'), {
     center: {lat: 40.8054491, lng: -73.9654415},
-    zoom: 8
+    zoom: 10,
+    scrollwheel: false
   });
-};
+
+  var marker = new google.maps.Marker({
+    position: {lat: 40.8054491, lng: -73.9654415},
+    map: map,
+    title: 'Monks Café'
+  });
+}
 
 var getReservations = function () {
     database.ref('reservations').on('value', function (results) {
