@@ -27,7 +27,7 @@ $('.reservation-button').on('click', function (e){
     reservationsReference.push(reservationData);
 })
 
-function initMap() {
+function initMap () {
   var map = new google.maps.Map(document.getElementById('mapDiv'), {
     center: {lat: 40.8054491, lng: -73.9654415},
     zoom: 10,
@@ -44,8 +44,8 @@ function initMap() {
 var getReservations = function () {
     database.ref('reservations').on('value', function (results) {
       var allReservations = results.val();
-      $('.reservations-list').empty();
-      
+      $('.reservation-list').empty();
+
       for (var reservation in allReservations) {
         var context = {
         name: allReservations[reservation].name,
